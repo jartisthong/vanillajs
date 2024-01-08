@@ -1,4 +1,13 @@
 
+body {
+    font-family: monospace;
+}
+
 .hidden {
     display: none;
+}
+
+
+#todo-form {
+    color: green;
 }

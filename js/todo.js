@@ -17,13 +17,14 @@ function deleteToDo(event) {
 }
 
 
-function paintToDo(newToDo) {
+function paintToDo(newToDoObj) {
     const li = document.createElement("li");
+    li.id = newToDoObj.id;
     const span = document.createElement("span");
     const button = document.createElement("button");
     button.innerText = "❀";
     button.addEventListener("click", deleteToDo);
-    span.innerText = newToDo;
+    span.innerText = newToDoObj.text;
     li.appendChild(span);
     li.appendChild(button);
     toDoList.appendChild(li);
@@ -33,8 +34,12 @@ function handleToDoSubmit(event) {
     event.preventDefault();
     const newToDo = toDoInput.value;
     toDoInput.value = "";
-    toDos.push(newToDo);
-    paintToDo(newToDo);
+    const newToDoObj = {
+        text: newToDo,
+        id: Date.now()
+    };
+    toDos.push(newToDoObj);
+    paintToDo(newToDoObj);
     saveToDo();
 }
 
@@ -48,3 +53,6 @@ if (savedToDos !== null) {
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo);
 }
+
+
+// html에 아이디를 넣어두고 싶다는데 무슨뜻일까? 
