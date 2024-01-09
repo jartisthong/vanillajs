@@ -16,9 +16,9 @@ body {
 }
 
 img {
-    max-width: auto;
-    border: 10px solid;
-    border-color: rgb(46, 46, 46);
+    width: auto;
+    height: 840px;
+    flex-shrink: 0;
 }
 
 #quote {
