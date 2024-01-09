@@ -1,6 +1,9 @@
 
 body {
     font-family: monospace;
+    color:rgb(255, 145, 0);
+    text-align: center;
+    background-color: rgb(248, 243, 237);
 }
 
 .hidden {
@@ -10,4 +13,23 @@ body {
 
 #todo-form {
     color: green;
+}
+
+img {
+    max-width: auto;
+    border: 10px solid;
+    border-color: rgb(46, 46, 46);
+}
+
+#quote {
+    color: rgb(46, 46, 46);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+button{
+    color: rgb(196, 61, 61);
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border-color: rgb(245, 106, 0);
 }
